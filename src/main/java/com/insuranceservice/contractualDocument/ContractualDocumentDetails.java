@@ -35,9 +35,9 @@ public class ContractualDocumentDetails {
     @JoinColumn(name = "BENEFICIARY_ID")
     private Client beneficiary;
     @Schema(description = "보상안내 받으실 분")
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "RECEIVING_INFORMATION_ID")
-    private Client receivingInformationId;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "INFORMATION_RECIPIENT_TYPE")
+    private InformationRecipientType informationRecipientType;
     @Schema(description = "사고 정보")
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "LOSS_ID")

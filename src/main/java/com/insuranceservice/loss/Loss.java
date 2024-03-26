@@ -13,7 +13,6 @@ import lombok.Setter;
 @Getter @Setter
 @Table(name = "LOSS")
 public class Loss {
-
     @Schema(description = "보험 id")
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "LOSS_ID")
